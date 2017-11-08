@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Successfully logged out || {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-4">
+    <p>Come back soon</p>
+    <a href="{% url 'user:login' %}">Login</a>
+    </div>
+{% endblock %}

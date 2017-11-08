@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from user.
+from user import urls as userurls
+from posts import urls as posturls
+from .views import Landingpage
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^u/', include()),
+    url(r'^$', Landingpage.as_view(),name='home'),
+    url(r'^u/', include(userurls, namespace='user')),
+    url(r'^post/', include(posturls, namespace='post')),
 
 ]

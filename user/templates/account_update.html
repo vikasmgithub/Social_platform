@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+<!-- Material form is just a materialize thing for django forms -->
+{% block content %}
+<div>
+          <form action="." method="POST" class="padding">
+            {% csrf_token %} {{ noodle_form.as_p }}
+            <div class="divider"></div>
+            {{ formset.management_form }}
+                {{ formset.as_p }}
+            <button type="submit">done</></button>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
