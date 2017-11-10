@@ -3,8 +3,19 @@
 {% block content %}
     {% for object in object_list %}
         <ul>
-            <li><a href="{% url 'post:detail' %}">{{ object.title }}</a>
+            <li><a href="{% url 'post:detail' slug=object.slug %}">{{ object.title }}</a>
                 {{ object.content }}
+
+                <p>
+                    <strong id="like_count">{{ object.likes }}</strong> people like this category
+
+                    {% if user.is_authenticated %}
+                        <button id="likes" post_id={{object.id}}  class="btn btn-primary" type="button">
+                      <span class="glyphicon glyphicon-thumbs-up"></span>
+                            </button>
+
+                    {% endif %}
+                </p>
             </li>
         </ul>
     {% endfor %}

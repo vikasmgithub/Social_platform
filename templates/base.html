@@ -112,6 +112,20 @@ RawBlameHistory
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
   <script src="{% static 'material/js/jquery.js' %}"></script>
+    <script>
+        $('#likes').click(function(){
+    var postid;
+    postid= $(this).attr("post_id");
+    $.get('/post/add_like/', {post_id: postid}, function(data){
+               $('#like_count').html(data);
+               $('#likes').hide();
+    });
+});
+$('#likes').click(function() {
+    $('#display_advance').toggle('1000');
+    $("i", this).toggleClass("glyphicon glyphicon-thumbs-down glyphicon glyphicon-thumbs-up");
+});
+    </script>
   </body>
 </html>
 © 2017 GitHub, Inc.

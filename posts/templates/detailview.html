@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for object in object_list %}
-        <ul>
-            <li><a href="{% url 'post:detail' %}">{{ object.title }}</a>
-                {{ object.content }}
-            </li>
-        </ul>
-    {% endfor %}
+    {{ object.created_by }} ||
+           || {{ object.title }}
+              ||  {{ object.content }}
+
 {% endblock %}
