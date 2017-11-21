@@ -1,11 +1,45 @@
-{% extends "base.html" %}
+{#{% extends "base.html" %}#}
 
+
+
+{#{% block content %}#}
+{##}
+{#    <form method="post" action="">{% csrf_token %}#}
+{#         {% form form=form %}{% endform %}#}
+{#        <input type="submit" value="Signin">#}
+{#    </form>#}
+{% extends 'base.html' %}
+{% load static %}
 {% load material_form %}
 
-{% block content %}
 
-    <form method="post" action="">{% csrf_token %}
+
+{% load static %}
+{% load material_form %}
+
+{% block title %}
+    {{ block.super }} | Login
+{% endblock %}
+
+{% block content %}
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body>
+<div class="container bootstrap snippet">
+    <div class="row login-page">
+        <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+    		<img src="http://ani-theme.strapui.com/images/flat-avatar.png" class="user-avatar">
+    		<h1>Bootdey.com</h1>
+    		    <form method="post" action="">{% csrf_token %}
          {% form form=form %}{% endform %}
         <input type="submit" value="Signin">
     </form>
+    	</div>
+    </div>
+</div>
+</body>
 {% endblock %}

@@ -17,12 +17,15 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from user import urls as userurls
 from posts import urls as posturls
-from .views import Landingpage
+from .views import profile
+from connections import  urls as connectionurls
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', Landingpage.as_view(),name='home'),
-    url(r'^u/', include(userurls, namespace='user')),
+    url(r'^$', profile,name='home'),
+    url(r'^user/', include(userurls, namespace='user')),
     url(r'^post/', include(posturls, namespace='post')),
+    url(r'^connectionurl/', include(connectionurls, namespace='post')),
 
 ]

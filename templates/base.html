@@ -1,142 +1,222 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @vikasmgithub
- Sign out
- Watch 0
-  Star 0  Fork 1 vikasmgithub/quora_clone
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-Branch: master Find file Copy pathquora_clone/templates/base.html
-9f04502  19 hours ago
- vikas mundra user login required added
-0 contributors
-RawBlameHistory
-102 lines (94 sloc)  4.14 KB
+{#Skip to content#}
+{#This repository#}
+{#Search#}
+{#Pull requests#}
+{#Issues#}
+{#Marketplace#}
+{#Explore#}
+{# @vikasmgithub#}
+{# Sign out#}
+{# Watch 0#}
+{#  Star 0  Fork 1 vikasmgithub/quora_clone#}
+{# Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings#}
+{#Branch: master Find file Copy pathquora_clone/templates/base.html#}
+{#9f04502  19 hours ago#}
+{# vikas mundra user login required added#}
+{#0 contributors#}
+{#RawBlameHistory#}
+{#102 lines (94 sloc)  4.14 KB#}
+{#{% load static %}#}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#  <head>#}
+{#    <meta charset="utf-8">#}
+{#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->#}
+{#    <meta name="description" content="">#}
+{#    <meta name="author" content="">#}
+{#    <link rel="icon" href="../../favicon.ico">#}
+{#    {% block head_title %}#}
+{#        <title>Social Clone</title>#}
+{#    {% endblock %}#}
+{##}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">#}
+{#      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->#}
+{#    {% block style %}#}
+{##}
+{#        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">#}
+{#         {% include 'material/includes/material_css.html' %}#}
+{##}
+{#    {% endblock %}#}
+{#    <!--[if lt IE 9]>#}
+{#      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>#}
+{#      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>#}
+{#    <![endif]-->#}
+{#  </head>#}
+{##}
+{#  <body>#}
+{##}
+{#    <nav class="navbar navbar-inverse navbar-fixed-top">#}
+{#      <div class="container">#}
+{#        <div class="navbar-header">#}
+{#          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">#}
+{#            <span class="sr-only">Toggle navigation</span>#}
+{#            <span class="icon-bar"></span>#}
+{#            <span class="icon-bar"></span>#}
+{#            <span class="icon-bar"></span>#}
+{#          </button>#}
+{#          <a class="navbar-brand" href="#">Social</a>#}
+{#        </div>#}
+{#        <div id="navbar" class="navbar-collapse collapse">#}
+{#          <form class="navbar-form navbar-right">#}
+{#            <div class="form-group">#}
+{#              <input type="text" placeholder="Email" class="form-control">#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#              <input type="password" placeholder="Password" class="form-control">#}
+{#            </div>#}
+{#            <button type="submit" class="btn btn-success">Sign in</button>#}
+{#          </form>#}
+{#            <ul class="nav navbar-nav navbar-right">#}
+{#                <li><a href="{% url 'post:feed' %}">Feed</a></li>#}
+{#                <li><a href="{% url 'post:post' %}">Create</a></li>#}
+{#            </ul>#}
+{#        </div><!--/.navbar-collapse -->#}
+{#      </div>#}
+{#    </nav>#}
+{##}
+{#    <!-- Main jumbotron for a primary marketing message or call to action -->#}
+{#    <div class="jumbotron">#}
+{#      <div class="container">#}
+{#        <h1>{% block title %}#}
+{#                Hookup#}
+{#            {% endblock %}#}
+{#        </h1>#}
+{#      </div>#}
+{#    </div>#}
+{##}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            {% block content %}#}
+{##}
+{#            {% endblock %}#}
+{#        </div>#}
+{#      <hr>#}
+{#    </div> <!-- /container -->#}
+{##}
+{##}
+{#    <!-- Bootstrap core JavaScript#}
+{#    ================================================== -->#}
+{#    <!-- Placed at the end of the document so the pages load faster -->#}
+{#    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->#}
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>#}
+{#    <!-- Include all compiled plugins (below), or include individual files as needed -->#}
+{#    <!-- Latest compiled and minified JavaScript -->#}
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"#}
+{#            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"#}
+{#            crossorigin="anonymous"></script>#}
+{#  <script src="{% static 'material/js/jquery.js' %}"></script>#}
+{#      {% include 'material/includes/material_js.html' %}#}
+{#    <script>#}
+{#        $('#likes').click(function(){#}
+{#    var postid;#}
+{#    postid= $(this).attr("post_id");#}
+{#    $.get('/post/add_like/', {post_id: postid}, function(data){#}
+{#               $('#like_count').html(data);#}
+{#               $('#likes').hide();#}
+{#    });#}
+{#});#}
+{#$('#likes').click(function() {#}
+{#    $('#display_advance').toggle('1000');#}
+{#    $("i", this).toggleClass("glyphicon glyphicon-thumbs-down glyphicon glyphicon-thumbs-up");#}
+{#});#}
+{#    </script>#}
+{#  </body>#}
+{#</html>#}
+{#© 2017 GitHub, Inc.#}
+{#Terms#}
+{#Privacy#}
+{#Security#}
+{#Status#}
+{#Help#}
+{#Contact GitHub#}
+{#API#}
+{#Training#}
+{#Shop#}
+{#Blog#}
+{#About#}
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/floating-menu.css' %}"
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-{#    <link rel="icon" href="../../favicon.ico">#}
-    {% block head_title %}
-        <title>Jumbotron Template for Bootstrap</title>
-    {% endblock %}
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    {% block style %}
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
          {% include 'material/includes/material_css.html' %}
-        {% include 'material/includes/material_js.html' %}
+    {% block head %}
+
     {% endblock %}
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Enquire</a>
+    {% block title %}
+        <title>Social</title>
+    {% endblock %}
+</head>
+<body>
+    <header class="floating-header">
+{#      <a href="#" class="site-logo" style="font-size:30px;color:#5bc0de;font-weight:bold">#}
+{#    YZUM#}
+{#  </a>#}
+      <div class="floating-menu-btn">
+        <div class="floating-menu-toggle-wrap">
+          <div class="floating-menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Feed</a></li>
-                <li><a href="">Ask</a></li>
-            </ul>
-        </div><!--/.navbar-collapse -->
       </div>
-    </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>{% block title %}
-                Hookup
-            {% endblock %}
-        </h1>
-        <p></p>
-      </div>
-    </div>
+      <div class="main-navigation-wrap">
+        <nav class="main-navigation" data-back-btn-text="Back">
+          <ul class="menu">
+            <li class="menu-item-has-children current-menu-item delay-0">
+              <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>More Options</a>
+              <ul class="sub-menu">
 
-    <div class="container">
-        <div class="row">
-            {% block content %}
+                <li class="current-menu-item"><a href="#">Home Design Agency</a></li>
+                <li><a href="#">Home Architecture</a></li>
+                <li><a href="#">Home Photographer</a></li>
+              </ul>
+            </li>
+            <li class="delay-1"><a href="#">Portfolio</a></li>
+            <li class="delay-2"><a href="#">Blog</a></li>
+            <li class="delay-3"><a href="#">About Us</a></li>
+            <li class="delay-4"><a href="#">Contacts</a></li>
+            <li class="delay-5"><a href="{% url 'user:logout' %}">Log Out</a></li>
+          </ul><!-- .menu -->
+        </nav><!-- .main-navigation -->
+      </div><!-- .main-navigation-wrap -->
+    </header>
+    {% block content %}
 
-            {% endblock %}
-        </div>
-      <hr>
-
-      <footer>
-        <p>&copy; 2017 VIKAS, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    {% endblock %}
+</body>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'js/floating-menu.js' %}"></script>
   <script src="{% static 'material/js/jquery.js' %}"></script>
-    <script>
-        $('#likes').click(function(){
-    var postid;
-    postid= $(this).attr("post_id");
-    $.get('/post/add_like/', {post_id: postid}, function(data){
-               $('#like_count').html(data);
-               $('#likes').hide();
-    });
-});
-$('#likes').click(function() {
-    $('#display_advance').toggle('1000');
-    $("i", this).toggleClass("glyphicon glyphicon-thumbs-down glyphicon glyphicon-thumbs-up");
-});
-    </script>
-  </body>
+<script>
+    $('#like').click(function(){
+      $.ajax({
+               type: "POST",
+               url: "{% url 'post:like' %}",
+               data: {'slug': $(this).attr('name'), 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+               dataType: "json",
+               success: function(response) {
+                      console.log(response.message);
+                      $("#likecount").html(response.likes_count);
+                      console.log('Company likes count is now ' + response.likes_count);
+                },
+{#                error: function(rs, e) {#}
+{#                       alert(rs.responseText);#}
+{#                }#}
+          });
+    })
+</script>
+
+      {% include 'material/includes/material_js.html' %}
 </html>
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About

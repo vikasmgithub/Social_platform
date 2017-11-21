@@ -1,13 +1,38 @@
 {% extends 'base.html' %}
+{#{% load material_form %}#}
+{#<!-- Material form is just a materialize thing for django forms -->#}
+{#{% block content %}#}
+{#<div>#}
+{#          <form action="." method="POST" class="padding">#}
+{#            {% csrf_token %} {{ noodle_form.as_p }}#}
+{#            <div class="divider"></div>#}
+{#            {{ formset.management_form }}#}
+{#          {% form form=formset.management_form %}{% endform %}#}
+{#                {{ formset.as_p }}#}
+{#              {% form form=formset %}#}
+{#              {% endform %}#}
+{#            <button type="submit">done</></button>#}
+{#        </form>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#{% endblock %}#}
+
+
+{% load material_form %}
 <!-- Material form is just a materialize thing for django forms -->
+
 {% block content %}
-<div>
-          <form action="." method="POST" class="padding">
-            {% csrf_token %} {{ noodle_form.as_p }}
+<div class="col s12 m8 offset-m2">
+      <div class="card">
+        <div class="card-content">
+        <h2 class="flow-text">Update your information</h2>
+          <form action="" method="POST" class="padding">
+            {% csrf_token %}
             <div class="divider"></div>
             {{ formset.management_form }}
                 {{ formset.as_p }}
-            <button type="submit">done</></button>
+              <input type="submit" value="update">
         </form>
         </div>
     </div>

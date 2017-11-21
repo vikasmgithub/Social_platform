@@ -1,0 +1,63 @@
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block content %}#}
+{##}
+{#    #}
+{#    <div>#}
+{#        <div>#}
+{#        {{ object.user }}#}
+{#        {{ object.bio }}#}
+{#        {{ object.phone }}#}
+{#    {{ object.city }}#}
+{#    </div>#}
+{#{% endblock %}#}
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block head %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/userprofile.css' %}">
+{% endblock %}
+
+{% block content %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-white profile-widget">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="image-container bg2" style="background:url(http://www.bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg)">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="avatar" alt="avatar">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="details">
+                            <h4>{{ object.user }}<i class="fa fa-sheild"></i></h4>
+                            <div>Bio {{ object.bio }}</div>
+                            <div>Contact number {{ object.phone }}</div>
+                            <div>Lives in {{ object.city }}</div>
+                            <div class="mg-top-10">
+                                <a href="{% url 'user:account_update' id=request.user.id %}" class="btn btn-default">Update Info</a>
+                                <a href="{% url 'post:post' %}" class="btn btn-success">Add Post</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

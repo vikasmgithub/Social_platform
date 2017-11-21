@@ -1,22 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for object in object_list %}
+
+
+    {% if user.is_authenticated %}
+    <p><a href="{% url 'user:logout' %}">Logout</a></p>
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <input type="submit" value="POST">
+    </form>
+    {% endif %}
+
+
+
+
+    {% for object in objects %}
         <ul>
             <li><a href="{% url 'post:detail' slug=object.slug %}">{{ object.title }}</a>
                 {{ object.content }}
 
-                <p>
-                    <strong id="like_count">{{ object.likes }}</strong> people like this category
-
-                    {% if user.is_authenticated %}
-                        <button id="likes" post_id={{object.id}}  class="btn btn-primary" type="button">
-                      <span class="glyphicon glyphicon-thumbs-up"></span>
-                            </button>
-
-                    {% endif %}
-                </p>
+                <input type="submit" id="like" name="{{ object.slug }}" value="Like" />
+                     <p id="likecount">{{ object.total_likes }}</p>
             </li>
         </ul>
     {% endfor %}
 {% endblock %}
+
+
+

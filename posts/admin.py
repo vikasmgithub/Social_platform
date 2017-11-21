@@ -4,4 +4,6 @@ from .models import Posts
 
 class PostsAdmin(admin.ModelAdmin):
     list_display = ('title','create_at','slug')
+
+
 admin.site.register(Posts,PostsAdmin)
